@@ -103,7 +103,7 @@ Lista_Ciudades.index("Dubai")
 
 # In[24]:
 
-#Lista_Ciudades.index("Tarapoto")
+Lista_Ciudades.index("Tarapoto")
 # Muestra un error, debido a que ese elemento no esta en la lista
 
 
@@ -123,7 +123,7 @@ print(Lista_Ciudades)
 # In[27]:
 
 
-#Lista_Ciudades.remove("Tangamandapio")
+Lista_Ciudades.remove("Tangamandapio")
 # Muestra un error, debido a que ese elemento no esta en la lista
 
 

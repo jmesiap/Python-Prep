@@ -6,7 +6,14 @@
 # 1) A partir de una lista vacía, utilizar un ciclo while para cargar allí números negativos del -15 al -1
 
 # In[1]:
+Mi_Lista = list()
 
+num = (-15)
+while True:
+    if num > (-1): break
+    Mi_Lista.append(num)
+    num +=1
+print(Mi_Lista)
 
 
 
@@ -14,6 +21,11 @@
 # 2) ¿Con un ciclo while sería posible recorrer la lista para imprimir sólo los números pares?
 
 # In[3]:
+i = 0
+while len(Mi_Lista)>i:
+    if Mi_Lista[i] % 2 == 0:
+        print(Mi_Lista[i])
+    i = i + 1
 
 
 
@@ -23,7 +35,9 @@
 
 # In[4]:
 
-
+for i in range(len(Mi_Lista)):
+    if Mi_Lista[i] % 2 == 0:
+        print(Mi_Lista[i])
 
 
 
@@ -31,13 +45,19 @@
 
 # In[7]:
 
-
+i=0
+for c in Mi_Lista:
+    if i>2: break
+    i +=1
+    print(c)
 
 
 # 5) Utilizar la función **enumerate** para obtener dentro del iterable, tambien el índice al que corresponde el elemento
 
 # In[9]:
-
+for i, c in enumerate(Mi_Lista):
+    if i>2: break
+    print(i, c)
 
 
 
@@ -45,7 +65,11 @@
 
 # In[10]:
 
-
+Nueva_Lista=[1,2,5,7,8,10,13,14,15,17,20]
+for idx, val in enumerate(Nueva_Lista):
+    if idx+1 != val:
+       Nueva_Lista.insert(idx, idx+1) 
+print(Nueva_Lista)
 
 
 
@@ -64,7 +88,12 @@ n = 1
 
 # In[23]:
 
+S_Fibo=[0,1]
+print (S_Fibo)
+for i in range(28):
+    S_Fibo.append(S_Fibo[i+1]+S_Fibo[i])
 
+print(S_Fibo)
 
 
 
@@ -72,7 +101,7 @@ n = 1
 
 # In[24]:
 
-
+print(sum(S_Fibo))
 
 
 # 9) La proporción aurea se expresa con una proporción matemática que nace el número irracional Phi= 1,618… que los griegos llamaron número áureo. El cuál se puede aproximar con la sucesión de Fibonacci. Con la lista del ejercicio anterior, imprimir el cociente de los últimos 5 pares de dos números contiguos:<br>
@@ -86,7 +115,13 @@ n = 1
 
 # In[38]:
 
-
+print(S_Fibo)
+conta = len(S_Fibo)-1
+x=0
+for i in range(1, 6):
+    print((S_Fibo[conta-x])/(S_Fibo[conta-i]))
+    conta = conta - 1
+    x=x+1
 
 
 # 10) A partir de la variable cadena ya dada, mostrar en qué posiciones aparece la letra "n"<br>
@@ -95,14 +130,25 @@ n = 1
 # In[39]:
 
 
-
+cadena = "Hola Mundo. Esto es una practica del lenguaje de programación Python"
+for pos, val in enumerate(cadena):
+    if val=="n":
+        print("n esta en la posición: ", pos)
 
 
 # 11) Crear un diccionario e imprimir sus claves utilizando un iterador
 
 # In[40]:
 
+Mi_Diccionario = {
+    "Código": ["C001", "C002", "C003"],
+    "Nombres": ["José", "Mateo", "Janet"],
+    "Apellidos": ["Mesia", "Mesia Díaz", "Vargas"],
+    "Edad": [44, 5, 44]
+}
 
+for clave in enumerate(Mi_Diccionario.keys()):
+    print( clave)
 
 
 
@@ -110,7 +156,9 @@ n = 1
 
 # In[41]:
 
-
+Lista_Cadena = list(cadena)
+for val in enumerate(Lista_Cadena):
+    print(val)
 
 
 
@@ -124,7 +172,13 @@ n = 1
 
 # In[48]:
 
+lista_1 = [1, 2, 3, 4, 5]
+lista_2 = ["Uno", "Dos", "Tres", "Cuatro", "Cinco"]
 
+U_Listas = zip(lista_1, lista_2)
+
+for elem  in U_Listas:
+    print (elem)
 
 
 
@@ -133,7 +187,18 @@ n = 1
 
 # In[49]:
 
+lis = [18,21,29,32,35,42,56,60,63,71,84,90,91,100]
+condi = False
+for numero in lis:
+    if numero % 7 == 0:
+        if condi==False:
+           Nueva_lis = list ()
+           Nueva_lis.append(numero)
+           condi=True
+        else:
+          Nueva_lis.append(numero)
 
+print(Nueva_lis)   
 
 
 
@@ -142,7 +207,15 @@ n = 1
 
 # In[56]:
 
+lis=[[1,2,3,4], "rojo", "verde", [True, False, False],["uno", "dos", "tres"]]
+cantidad = 0
+for elem in lis:
+    if type(elem)== list:    
+       cantidad = cantidad + len(elem)
+    else: 
+        cantidad +=1   
 
+print(cantidad)
 
 
 # In[51]:
@@ -161,5 +234,11 @@ n = 1
 
 # In[58]:
 
+for i, elem in enumerate(lis):
+    if type(elem) != list:
+       lis[i] = [elem]
+
+print (lis)
 
 
+# %%
