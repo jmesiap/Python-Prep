@@ -151,10 +151,6 @@ def Calc_facto(num):
     num = num  * Calc_facto(num - 1)
     return num
 
-
-
-
-
 print(Calc_facto(5.5))
 
 
