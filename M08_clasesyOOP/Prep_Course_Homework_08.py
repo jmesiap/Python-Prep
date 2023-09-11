@@ -331,6 +331,29 @@ class Func_creadas_Mod7:
 
 # In[1]:
 
+from TareaM08 import *
+Prueba_Import = FuncionesM08([1,1,2,5,8,8,9,11,15,16,16,16,18,20])
 
+print ("-----------------Números primos-----------------")
+print ("")
+print(Prueba_Import.Calc_Primo())
+print ("")
+
+print("----------El número que mas se repite-----------")
+print ("")
+List_1, veces, num = Prueba_Import.F_Repite()
+for i in List_1:
+   print(i)
+print("El número ", num, "se repites : ", veces, " veces" )
+print ("")
+
+print("--------------Conversión de grados:--------------")
+print ("")
+Prueba_Import.Calc_Convertir("Celsius", "Farenheit")    
+print ("")
+
+print("-------------------Factorial:--------------------")
+print ("")
+print(Prueba_Import.Calc_facto())
 
 

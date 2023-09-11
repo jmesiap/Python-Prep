@@ -1,4 +1,4 @@
-class Funciones_M8_Preg8:
+class FuncionesM08:
     
     def __init__(self, Lista_Valores):
         self.Lista = Lista_Valores 
@@ -96,3 +96,5 @@ class Funciones_M8_Preg8:
             
         num = num  * self.F_facto(num - 1)
         return num
+    
+    
