@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./M09_errorhandling"
+    ]
+}

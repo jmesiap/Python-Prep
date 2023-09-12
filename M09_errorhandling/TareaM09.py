@@ -1,4 +1,4 @@
-class FuncionesM08:
+class FuncionesM09:
     
     def __init__(self, Lista_Valores):
         self.Lista = Lista_Valores 
@@ -55,10 +55,10 @@ class FuncionesM08:
         print(esperados)
 
         if str(origen) not in esperados:
-           print("Ingrese los parametros esperados,", esperados) 
+           print(" 1  Ingrese los parametros esperados,", esperados) 
            return 
         if str(destino) not in esperados:
-           print("Ingrese los parametros esperados,", esperados) 
+           print(" 2  Ingrese los parametros esperados,", esperados) 
            return 
         
         for i in self.Lista:    
@@ -66,7 +66,10 @@ class FuncionesM08:
             print(i,"Celcius convertido a Farenheit es igual a:",  round(Valor_Result,2))
         
         
-        
+        #if origen or destino == "Celsius" or origen or destino == "Kelvin" or destino == "Farenheit":
+          
+        #else:   
+            #return "Ingrese un valor correcto: Celsius, Kelvin ó Farenheit"       
 
     def F_convertir(self, valor, origen, destino):
             resultado=0
