@@ -51,22 +51,20 @@ class FuncionesM08:
 
         esperados =  ["Celsius", "Farenheit", "Kelvin"]
         #Valor_Result = []
-        print("Hola Pepe")
-        print(esperados)
+        #print("Hola Pepe")
+        #print(esperados)
 
         if str(origen) not in esperados:
-           print("Ingrese los parametros esperados,", esperados) 
+           print("Valor incorrecto -->", origen, "<--     Ingrese los parametros esperados,", esperados) 
            return 
         if str(destino) not in esperados:
-           print("Ingrese los parametros esperados,", esperados) 
+           print("Valor incorrecto -->", destino, "<--    Ingrese los parametros esperados,", esperados) 
            return 
         
         for i in self.Lista:    
             Valor_Result = self.F_convertir(i, origen, destino)    
-            print(i,"Celcius convertido a Farenheit es igual a:",  round(Valor_Result,2))
-        
-        
-        
+            print(i, origen, "convertido a", destino, "es igual a:",  round(Valor_Result,2))
+
 
     def F_convertir(self, valor, origen, destino):
             resultado=0
@@ -89,9 +87,9 @@ class FuncionesM08:
             elif origen=="Kelvin":
                 if destino == "Celsius":
                     resultado = valor-273.15
-                if destino == "Farenheit":
+                elif destino == "Farenheit":
                     resultado = (9*valor-2458.35)/5 + 32
-                if destino == "Kelvin":
+                elif destino == "Kelvin":
                     resultado = valor        
                 else: print("3 -- Inghrese valor correcto Farenheit, Kelvin ó Celsius")
             else: print("4 -- Inghrese valor correcto Farenheit, Kelvin ó Celsius")    
@@ -113,3 +111,5 @@ class FuncionesM08:
             
         num = num  * self.F_facto(num - 1)
         return num     
+
+

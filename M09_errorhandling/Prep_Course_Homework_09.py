@@ -3,9 +3,18 @@
 
 # ## Manejo de errores
 
-# 1) Con la clase creada en el módulo 7, tener en cuenta diferentes casos en que el código pudiera arrojar error. Por ejemplo, en la creación del objeto recibimos una lista de números enteros pero ¿qué pasa si se envía otro tipo de dato?
+# 1) Con la clase creada en el módulo 8, tener en cuenta diferentes casos en que el código pudiera arrojar error. Por ejemplo, en la creación del objeto recibimos una lista de números enteros pero ¿qué pasa si se envía otro tipo de dato?
 
 # In[1]:
+
+import sys
+sys.path.append(r'C:\JIMPSOFT\HENRY\DATA SCIENCE\Python-Prep\M08_clasesyOOP')
+
+# In[2]
+from TareaM08 import FuncionesM08
+# Func_Import = FuncionesM08([1,2,"Hola"]) # Al ingresar datos incorrectos, aroja un error, en este caso espera numeros y se ingreso el texto "Hola"
+Func_Import = FuncionesM08([1,2])
+Func_Import.Calc_Primo()
 
 
 
@@ -14,8 +23,12 @@
 
 # In[5]:
 
+from TareaM08 import FuncionesM08
 
 
+Func_Import = FuncionesM08([1,2,3,4,5,6,7,8,9,10])
+Func_Import.Calc_Convertir("1","2")
+Func_Import.Calc_Convertir("Celsius","Farenheit")
 
 
 # 3) Importar el modulo "unittest" y crear los siguientes casos de pruebas sobre la clase utilizada en el punto 2<br>
