@@ -12,7 +12,9 @@ sys.path.append(r'C:\JIMPSOFT\HENRY\DATA SCIENCE\Python-Prep\M08_clasesyOOP')
 
 # In[2]
 from TareaM08 import FuncionesM08
+
 # Func_Import = FuncionesM08([1,2,"Hola"]) # Al ingresar datos incorrectos, aroja un error, en este caso espera numeros y se ingreso el texto "Hola"
+
 Func_Import = FuncionesM08([1,2])
 Func_Import.Calc_Primo()
 

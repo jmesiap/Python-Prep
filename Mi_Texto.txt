@@ -1,0 +1,10 @@
+Pepe eres muy bello 
+Pepe eres muy Hermoso 
+Pepe eres Excelso 
+Pepe eres el mejor 
+
+['Pepe', 'Janet', 'Mateo', 'Delicia']
+Pepe
+Janet
+Mateo
+Delicia
